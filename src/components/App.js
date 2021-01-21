@@ -1,9 +1,14 @@
 import React from 'react';
 
+import ProductItem from './ProductItem';
+
 const App = () => {
+   
     return(
-        <div>
-            up and running!
+        <div className="ui container">
+            
+                  <ProductItem />
+            
         </div>
     );
 }
