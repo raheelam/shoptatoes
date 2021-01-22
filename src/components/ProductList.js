@@ -3,14 +3,21 @@ import {connect} from 'react-redux';
 
 import ProductItem from './ProductItem';
 
-const ProductList = ({products}) => {
+//the products group property is the name of groups of products in the redux store  e.g featured, collections, all
+const ProductList = ({products,  header, subHeader, children}) => {
     const getProducts = () =>{
-        return products.map(product=><ProductItem price = {product.price} name={product.productName}/>);
+        if(!products){
+            return '';
+        }
+        return products.map(product=><ProductItem key={product.id} price = {product.price} name={product.productName}/>);
     };
     return(
-        <div className = "ui segment center aligned">
-        <h1>Collections</h1>
-        <span>balls</span>
+        <div style={{padding:"40px 0px 40px 0px"}} className = "  ui container center aligned">
+        <h1 style={{marginBottom:"70px"}} className="ui  header">
+            {header}
+            <span className="sub header">{subHeader}</span>
+        </h1>
+        <div>{children}</div>
         <div className="ui four column grid">
         {getProducts()}
 
@@ -18,9 +25,9 @@ const ProductList = ({products}) => {
         </div>
     );
 };
-const mapPropsToState = (state) =>{
+const mapPropsToState = (state,ownProps) =>{
     return{
-        products: state.products
+        products: state[ownProps.productsGroup]
     }
 }
 

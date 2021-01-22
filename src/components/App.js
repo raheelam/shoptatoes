@@ -7,7 +7,10 @@ const App = () => {
     return(
         <div className="ui container">
             
-                  <ProductList />
+                  <ProductList header="Collections" subHeader="potatoes" productsGroup="products" />
+                  <ProductList header="Shop" productsGroup="featuredProducts" />
+                      
+                  
             
         </div>
     );
