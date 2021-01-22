@@ -1,13 +1,13 @@
 import React from 'react';
 
-import ProductItem from './ProductItem';
+import ProductList from './ProductList';
 
 const App = () => {
    
     return(
         <div className="ui container">
             
-                  <ProductItem />
+                  <ProductList />
             
         </div>
     );
