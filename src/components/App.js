@@ -1,18 +1,25 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import ProductList from './ProductList';
+import HomePage from './HomePage';
+import Shop from './Shop';
 import Header from './Header';
+import Footer from './Footer'
 
 const App = () => {
    
     return(
         
-        <div className="ui container">
-        
-        
-                  <Header />
-                  <ProductList header="Collections" subHeader="potatoes" productsGroup="products" />
-                  <ProductList header="Shop" productsGroup="featuredProducts" />
+        <div className="">
+            <BrowserRouter>
+        <div>
+          <Header />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/shop" exact component={Shop} />
+          
+          <Footer />
+        </div>
+      </BrowserRouter>
                       
                   
             
