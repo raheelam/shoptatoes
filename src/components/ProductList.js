@@ -12,13 +12,13 @@ const ProductList = ({products,  header, subHeader, children}) => {
         return products.map(product=><ProductItem key={product.id} price = {product.price} name={product.productName}/>);
     };
     return(
-        <div style={{padding:"40px 0px 40px 0px"}} className = "  ui container center aligned">
+        <div style={{padding:"36px 0px 36px 0px"}} className = "  ui container center aligned">
         <h1 style={{marginBottom:"70px"}} className="ui  header">
             {header}
             <span className="sub header">{subHeader}</span>
         </h1>
         <div>{children}</div>
-        <div className="ui four column grid">
+        <div className="ui four column grid center aligned">
         {getProducts()}
 
         </div>
