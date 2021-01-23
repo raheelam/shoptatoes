@@ -82,7 +82,8 @@ const Header = () =>{
             Gift Cards
           </a>
           <a href="#" className="item">
-            Cart
+            Cart &nbsp;
+            <i className="ui icon shopping bag"></i>
           </a>
           
           

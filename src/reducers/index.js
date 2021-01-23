@@ -24,20 +24,40 @@ const featuredProductsReducer= ()=>{
 
 };
 
+const selectedProductsReducer = (selectedProducts = null,action) =>{
+    return [
+        {productName: "food", price: 50,id:1},
+        {productName: "drink", price: 50,id:2},
+        {productName: "water", price: 50,id:3},
+        {productName: "braincell", price: 0,id:4}
+    ];
+};
+
+
 const selectedProductReducer = (selectedProduct = null,action) =>{
     if(action.type === "SELECT_PRODUCT"){
         return action.payload;
     }
     return selectedProduct;
+};
 
-
+const selectedOptionReducer = (selectedOption = null,action) =>{
+    if(action.type === "SELECT_OPTION"){
+        return action.payload;
+    }
+    return selectedOption;
 }
+
+
+
 
 export default combineReducers(
     {
         products: productsReducer,
         featuredProducts: featuredProductsReducer,
-        selectedProduct: selectedProductReducer
+        selectedProduct: selectedProductReducer,
+        selectedOption: selectedOptionReducer,
+        selectedProducts: selectedProductsReducer,
 
     }
 );
