@@ -17,7 +17,7 @@ const ProductList = ({products,  header, subHeader, children}) => {
             {header}
             <span className="sub header">{subHeader}</span>
         </h1>
-        <div>{children}</div>
+        <div className="" style={{marginBottom: "60px"}}>{children}</div>
         <div className="ui four column grid center aligned">
         {getProducts()}
 

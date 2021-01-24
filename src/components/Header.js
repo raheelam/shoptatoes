@@ -1,5 +1,6 @@
 import React from 'react';
 import {useMediaPredicate} from "react-media-hook";
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,8 +12,17 @@ const dropdown = () =>{
     uidrp.style.right = "0";
     uidrp.style.top = "0";
     uidrp.style.background = "white";
+    uidrp.style.zIndex = "999";
     uidrp.style.borderLeft = "3px solid white";
-    dmenu.hidden? dmenu.hidden=false : dmenu.hidden=true;
+    
+    if(dmenu.hidden){
+         dmenu.hidden=false;
+         uidrp.style.boxShadow = "5px 10px 18px #8888";
+    } else{ 
+        dmenu.hidden=true;
+        uidrp.style.boxShadow = "none";
+    }
+
 
     
 }
@@ -20,22 +30,27 @@ const dropdown = () =>{
 const Header = () =>{
     const lessThan540 = useMediaPredicate("(max-width: 540px)");
     return(
+
         
         <div className="ui secondary pointing menu ">
+        <div className="left menu">
+            <Link to="/" className="item header">Shoptatoes</Link>
+            </div>
         {   lessThan540 &&
             <React.Fragment>
-            <div className="left menu">
-            <a href="#" className="item header">Shoptatoes</a>
-            </div>
+            
 
-            <div className="right menu item">
+            <div className="right menu item ">
             
    <div onClick={dropdown} className="ui d">
     <i  className=" justify align icon"></i>
     <div hidden className="d menu">
-      <a className="item" dataValue="idk">Electronics</a>
+      <a className="item" >balls</a>
       <a className="item">Automotive</a>
       <a className="item">Home</a>
+      <a href="#" className="item">Decor</a>
+      <a href="#" className="item">Play</a>
+      <a href="#" className="item">Slides</a>
     </div>
     
   
@@ -67,7 +82,8 @@ const Header = () =>{
             Gift Cards
           </a>
           <a href="#" className="item">
-            Cart
+            Cart &nbsp;
+            <i className="ui icon shopping bag"></i>
           </a>
           
           
