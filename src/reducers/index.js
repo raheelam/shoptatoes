@@ -42,9 +42,10 @@ const selectedProductReducer = (selectedProduct = null,action) =>{
 };
 
 const selectedOptionReducer = (selectedOption = null,action) =>{
+  
     if(action.type === "SELECT_OPTION"){
         return action.payload;
-    }
+    }else 
     return selectedOption;
 }
 
