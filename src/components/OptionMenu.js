@@ -7,7 +7,7 @@ const OptionMenu = ({options, selectOption, selectedOption,onChangeH}) =>{
 
     return(
         
-          <select style={{margin: "0px 10px"}} value={selectedOption|| ""} onChange={ onChangeH?onChangeH:(e)=>selectOption(e.target.value)}>
+          <select style={{margin: "0px 10px"}} value={selectedOption|| ""} onChange={ (e)=>selectOption(e.target.value)}>
             {options.map((option) => (
               <option value={option.value}>{option.label}</option>
             ))}
