@@ -9,7 +9,7 @@ const ProductList = ({products,  header, subHeader, children}) => {
         if(!products){
             return '';
         }
-        return products.map(product=><ProductItem key={product.id} price = {product.price} name={product.productName}/>);
+        return products.map(product=><ProductItem key={product.id} price = {product.price} name={product.productName} id={product.id} />);
     };
     return(
         <div style={{padding:"36px 0px 36px 0px"}} className = "  ui container center aligned">

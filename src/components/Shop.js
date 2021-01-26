@@ -29,7 +29,7 @@ const Shop = () => {
    const [selectedSorting, setSelectedSorting] = useState(sortingOptions[0]);
    const [selectedCategory, setSelectedCategory] = useState(categoryOptions[0]);
    //on mount or change category go search for products based of the selected category
-   //create an action creator that takes category as a parameter and return those products
+   //create an action creator that takes category as a parameter and returns those products
     return(
         
         <div className="">
