@@ -44,8 +44,8 @@ const Section2 = () =>{
             </div>
             <div style={{marginBottom: "-140px"}} className="eight wide column">
                <div style={{maxWidth:"90%", margin:"0px auto"}}>
-               <img style={img1} alt="HOME" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg"/>
-               <img style={img2} alt="HOME" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg"/>
+               <img style={img1} alt="HOME" src="https://images.pexels.com/photos/769585/pexels-photo-769585.jpeg?cs=srgb&dl=pexels-daria-shevtsova-769585.jpg&fm=jpg"/>
+               <img style={img2} alt="HOME" src="https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?cs=srgb&dl=pexels-medhat-ayad-447592.jpg&fm=jpg"/>
 
               
 

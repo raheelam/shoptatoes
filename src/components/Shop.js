@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {connect} from 'react-redux';
 
 import ProductList from './ProductList';
 import Options from './Options';
@@ -25,7 +25,7 @@ const sortingOptions = [
         value: "lowestPrice"
     }
 ];
-const Shop = () => {
+const Shop = ({products}) => {
    const [selectedSorting, setSelectedSorting] = useState(sortingOptions[0]);
    const [selectedCategory, setSelectedCategory] = useState(categoryOptions[0]);
    //on mount or change category go search for products based of the selected category
@@ -33,14 +33,19 @@ const Shop = () => {
     return(
         
         <div className="">
-            <ProductList header="Shop" productsGroup="products" >
-            <div style={{textAlign:"right"}}className="">
+            <ProductList products={products} header="Shop" productsGroup="products" />
+           
+          {/*  <div style={{textAlign:"right"}}className="">
             <Options options={categoryOptions} selectedOption={selectedCategory} onChange={setSelectedCategory}/>
             <Options options={sortingOptions} selectedOption={selectedSorting} onChange={setSelectedSorting} />
             </div>
-            </ProductList> 
+         */} 
         </div>
     );
 }
-
-export default Shop;
+const mapStateToProps = (state) =>{         
+        return {
+            products: state.products
+        }
+}
+export default connect(mapStateToProps)(Shop);

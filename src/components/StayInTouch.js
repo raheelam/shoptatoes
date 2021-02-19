@@ -3,7 +3,8 @@ import React from 'react';
 
 const StayInTouch = () => {
     return(
-       <div style={{padding:"70px 0px", background:"#303932"}} >
+       
+       <div style={{padding:"70px 0px", background:"#99989e "}} >
             <div  className="ui two columns grid middle aligned">
             
                 <div className="column">
@@ -14,7 +15,7 @@ const StayInTouch = () => {
                   </form>
                 </div>
                 <div  className="column center aligned">
-                    <img style={{width:"80%", height:"150px"}} alt="section4" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg" />
+                    <img style={{width:"80%", height:"150px"}} alt="section4" src="https://images.pexels.com/photos/6283845/pexels-photo-6283845.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6283845.jpg&fm=jpg" />
                 </div>
                 
             </div>

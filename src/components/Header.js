@@ -50,7 +50,7 @@ const Header = () =>{
       <a className="item">Home</a>
       <a href="#" className="item">Decor</a>
       <a href="#" className="item">Play</a>
-      <a href="#" className="item">Slides</a>
+      <Link to="/shop" className="item">Shop</Link>
     </div>
     
   
@@ -69,7 +69,7 @@ const Header = () =>{
             <a href="#" className="item">Balls</a>
             <a href="#" className="item">Decor</a>
             <a href="#" className="item">Play</a>
-            <a href="#" className="item">Slides</a>
+            <Link href="/shop" className="item">Shop</Link>
         </div>
         
             

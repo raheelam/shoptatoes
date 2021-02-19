@@ -4,7 +4,7 @@ import {useMediaPredicate} from "react-media-hook";
 const Footer = () => {
     const lessThan500 = useMediaPredicate("(max-width: 500px)");
     return(
-    <div style={{background:"grey"}} className ="ui section  " >
+    <div style={{background:"#EBE9F6"}} className ="ui section  " >
         <div class="ui  grid centered container ">
   <div class=" column row  "  >
   { !lessThan500 &&

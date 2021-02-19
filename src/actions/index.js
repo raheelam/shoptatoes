@@ -20,3 +20,44 @@ export const selectOption = (option)=>{
     }
 
 };
+
+
+export const selectQty = (qty) =>{
+    return{
+        type: "SELECT_QTY",
+        payload: qty
+    }
+};
+
+export const selectSize = (size) =>{
+    return{
+        type: "SELECT_SIZE",
+        payload: size
+    }
+};
+
+export const addToCart = (product) =>{
+    return{
+        type: "ADD_TO_CART",
+        payload: product
+    }
+};
+
+export const increaseQty = (qty) =>{
+    return{
+        type: "INCREASE_QTY",
+        payload: qty
+    }
+};
+
+export const removeFromCart = (itemId) =>{
+    return{
+        type: "REMOVE_FROM_CART",
+        payload: itemId
+    }
+};
+export const emptyCart = () =>{
+    return{
+        type: "EMPTY_CART"
+    }
+};

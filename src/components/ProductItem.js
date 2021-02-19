@@ -1,46 +1,34 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {useMediaPredicate} from "react-media-hook";
-const imgStyle = {
-  width: "75%",
-}
+import Rating from './Rating';
+import {imgStyle, noWrap, noOverflow, priceStyle, topDivStyle} from './productItemStyles'
 
-const ProductItem = ({price, name, id}) => {
-  const lessThan800 = useMediaPredicate("(max-width: 800px)");
-    return(
-  <div className ={` column `}>
+const ProductItem = ({price, name, id, image, rating, store}) => {
   
+  return(
+  <div className ="column">
     <div className=" ui fluid card ">
     <Link to={`/product/${id}`}>
-    <div style={{padding:"46px 10px", background:"grey",position:"relative"}} className="center aligned">
-  <a className="image" href="#">
-    <img style={imgStyle} src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg"/>
-  </a>
-  <p className="left floated" style={{position: "absolute", left:"0",bottom: "16px", background: "white",paddingRight:"16px"}}>&#36;{price}</p>
+    <div style={topDivStyle} className="center aligned">
+  <div className="image" >
+    <img alt={name} style={imgStyle} src={image}/>
+  </div>
+  <p className="left floated" style={priceStyle}> &#8358; { price } </p>
   </div>
   </Link>
   
-  { !lessThan800 &&
+ 
     <div className="content">
-    <div style={{marginBottom:"18px"}} className="center aligned">
-    <a className="header" href="#">{name}</a><br></br>
-    <span >color</span>
+    <div style={noOverflow} className="">
+    <Link style={noWrap} className="header" to={`/product/${id}`}>{name}</Link><br></br>
+    <span><Rating rating={rating} /></span>
     </div>
-    <div className="meta">
-    <div className="tiny ui left labeled button" tabIndex="0">
-  <a className="ui basic label">
-    Add to cart
-  </a>
-  <div className="tiny  ui icon button">
-    <i className="ui icon plus"></i>
-  </div>
-</div>
-      
-      <a className={`tiny ui primary button ${window.innerWidth>1200?"right floated":" "} `}>Buy now</a>
+    <div style={noOverflow}  className="meta">
+    <p style={noWrap}>{store}</p>
     </div>
   </div>
 
-  }
+  
   
   
 </div>

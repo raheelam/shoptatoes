@@ -4,7 +4,7 @@ const TopPart = () =>{
     return(
         <div className = "ui grid" >
             <div className="eight wide column" style={{paddingTop: "0px"}}>
-                <img style={{width: "100%", height: "350px"}} alt="HOME" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg"/>
+                <img style={{width: "100%", height: "350px"}} alt="HOME" src="https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg?cs=srgb&dl=pexels-vecislavas-popa-1668860.jpg&fm=jpg"/>
             </div>
             <div className="eight wide column center aligned middle aligned">
                <div>

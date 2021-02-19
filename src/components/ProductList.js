@@ -9,15 +9,15 @@ const ProductList = ({products,  header, subHeader, children}) => {
         if(!products){
             return '';
         }
-        return products.map(product=><ProductItem key={product.id} price = {product.price} name={product.productName} id={product.id} />);
+        return products.map(product=><ProductItem key={product.id} price = {product.price} name={product.productName} id={product.id} image={product.imageUrl} />);
     };
     return(
         <div style={{padding:"36px 0px 36px 0px"}} className = "  ui container center aligned">
-        <h1 style={{marginBottom:"70px"}} className="ui  header">
+        <h1 style={{marginBottom:"36px"}} className="ui  header">
             {header}
             <span className="sub header">{subHeader}</span>
         </h1>
-        <div className="" style={{marginBottom: "60px"}}>{children}</div>
+        
         <div className="ui four column grid center aligned">
         {getProducts()}
 
@@ -31,4 +31,5 @@ const mapPropsToState = (state,ownProps) =>{
     }
 }
 
-export default connect(mapPropsToState)(ProductList);
+//export default connect(mapPropsToState)(ProductList);
+export default ProductList;
