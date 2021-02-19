@@ -12,7 +12,7 @@ const ReviewCard = () =>{
         </div>
         <div className="extra content">
           <div className="center aligned author">
-            <img className="ui massive avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"/>
+            <img className="ui massive avatar image" src="https://cdn.onlinewebfonts.com/svg/img_210318.png"/>
             <p>Jenny</p>
             <p>19.5.2021</p>
           </div>

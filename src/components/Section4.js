@@ -11,16 +11,16 @@ const Section4 = () => {
             <div  className="ui four columns grid ">
             
                 <div className="column">
-                    <img  style={imgStyle} alt="section4" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg"/>
+                    <img  style={imgStyle} alt="section4" src="https://images.pexels.com/photos/1571452/pexels-photo-1571452.jpeg?cs=srgb&dl=pexels-vecislavas-popa-1571452.jpg&fm=jpg"/>
                 </div>
                 <div   className=" column">
-                    <img style={imgStyle} alt="section4" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg" />
+                    <img style={imgStyle} alt="section4" src="https://images.pexels.com/photos/3773571/pexels-photo-3773571.png?cs=srgb&dl=pexels-curtis-adams-3773571.jpg&fm=jpg" />
                 </div>
                 <div  className=" column">
-                    <img style={imgStyle} alt="section4" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg" />  
+                    <img style={imgStyle} alt="section4" src="https://images.pexels.com/photos/6283838/pexels-photo-6283838.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6283838.jpg&fm=jpg" />  
                 </div>
                 <div  className=" column">
-                    <img style={imgStyle} alt="section4" src="https://static.demilked.com/wp-content/uploads/2016/10/nikon-small-world-photo-contest-2016-16.jpg" />  
+                    <img style={imgStyle} alt="section4" src="https://images.pexels.com/photos/4846455/pexels-photo-4846455.jpeg?cs=srgb&dl=pexels-rachel-claire-4846455.jpg&fm=jpg" />  
                 </div>
             </div>
         </div>

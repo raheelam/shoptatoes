@@ -15,9 +15,10 @@ const App = () => {
             <BrowserRouter>
         <div>
           <Header />
-          <Route path="/" exact component={HomePage} />
           <Route path="/shop" exact component={Shop} />
           <Route path="/product/:id" exact component={ProductDetails} />
+          <Route path="/" exact component={HomePage} />
+          
           
           <Footer />
         </div>
