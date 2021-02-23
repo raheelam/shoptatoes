@@ -1,4 +1,6 @@
 
+
+
 import {connect} from 'react-redux';
 
 import ProductList from './ProductList';
@@ -6,6 +8,8 @@ import ProductList from './ProductList';
 
 const Shop = ({products}) => {
    
+
+    
    //on mount or change category go search for products based of the selected category
    //create an action creator that takes category as a parameter and returns those products
     return(

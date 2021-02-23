@@ -45,11 +45,13 @@ const Header = () =>{
    <div onClick={dropdown} className="ui d">
     <i  className=" justify align icon"></i>
     <div hidden className="d menu">
+
       <a href="/" className="item" >balls</a>
       <a href="/" className="item">Automotive</a>
       <a href="/" className="item">Home</a>
       <a href="/" className="item">Decor</a>
       <a href="/" className="item">Play</a>
+
       <Link to="/shop" className="item">Shop</Link>
     </div>
     
@@ -65,16 +67,19 @@ const Header = () =>{
         { !lessThan540 &&
         <React.Fragment>
         <div className="left menu">
+
             <a href="/" className="item">Ball Pits</a>
             <a href="/" className="item">Balls</a>
             <a href="/" className="item">Decor</a>
             <a href="/" className="item">Play</a>
             <Link to="/shop" className="item">Shop</Link>
+
         </div>
         
             
         
         <div className="right menu">
+
           <a href="/" className="item">
             Blogs
           </a>
@@ -82,6 +87,7 @@ const Header = () =>{
             Gift Cards
           </a>
           <a href="/" className="item">
+
             Cart &nbsp;
             <i className="ui icon shopping bag"></i>
           </a>

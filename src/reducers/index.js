@@ -10,6 +10,7 @@ const productsReducer = () =>{
         {productName: "drink", price: 50,id:6, category:"drink" , description: "blah blah blah balh", imageUrl:"https://images.pexels.com/photos/932095/pexels-photo-932095.jpeg?cs=srgb&dl=pexels-photomix-company-932095.jpg&fm=jpg"},
         {productName: "wtaer", price: 50,id:7, category:"water" , description: "blah blah blah balh", imageUrl: "https://images.pexels.com/photos/6283845/pexels-photo-6283845.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6283845.jpg&fm=jpg"},
         {productName: "braincell", price: 0,id:8, category: "Misc" , description: "blah blah blah balh", imageUrl: "https://images.pexels.com/photos/6283845/pexels-photo-6283845.jpeg?cs=srgb&dl=pexels-max-vakhtbovych-6283845.jpg&fm=jpg"}
+
     ];
 
 };

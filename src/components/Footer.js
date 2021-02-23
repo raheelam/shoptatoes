@@ -14,7 +14,7 @@ const Footer = () => {
           <p>HELLO</p>
           <p>HELLO</p>
           <p>HELLO</p>
-          
+
 
     </div>
   }
@@ -24,7 +24,8 @@ const Footer = () => {
           <p>Frequently asked questions</p>
           <p>HELLO</p>
           <p>HELLO</p>
-          
+
+
       </div>
     </div>
     <div className={`${lessThan500?"six":"four"} wide column`}>
@@ -32,7 +33,6 @@ const Footer = () => {
       <p>HELLO</p>
           <p>HELLO there there</p>
           <p>HELLO</p>
-         
     </div>
     <div class="four wide column">
       <h3 className="ui header">Follow Us</h3>

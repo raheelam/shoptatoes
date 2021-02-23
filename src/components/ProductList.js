@@ -27,6 +27,5 @@ const ProductList = ({products,  header, subHeader, children}) => {
 };
 
 
-
 //export default connect(mapPropsToState)(ProductList);
 export default ProductList;
