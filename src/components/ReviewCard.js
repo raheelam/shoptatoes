@@ -1,9 +1,9 @@
 import React from 'react';
 import Rating from './Rating';
 
-const ReviewCard = () =>{
+const ReviewCard = ({sliderClass}) =>{
     return(
-        <div className="ui card">
+        <div className={`ui card ${sliderClass} centered`}>
         <div className="content">
           <div className="center aligned header"><Rating rating="4" /></div>
           <div  className="center aligned description">

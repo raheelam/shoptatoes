@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom';
 import Rating from './Rating';
 import {imgStyle, noWrap, noOverflow, priceStyle, topDivStyle} from './productItemStyles'
 
-const ProductItem = ({price, name, id, image, rating, store}) => {
+const ProductItem = ({price, name, id, image, rating, store, sliderClass}) => {
   
   return(
-  <div className ="column">
+  <div className = {`column ${sliderClass}`}>
     <div className=" ui fluid card ">
     <Link to={`/product/${id}`}>
     <div style={topDivStyle} className="center aligned">
-  <div className="image" >
+  <div className={`image`} >
     <img alt={name} style={imgStyle} src={image}/>
   </div>
   <p className="left floated" style={priceStyle}> &#8358; { price } </p>

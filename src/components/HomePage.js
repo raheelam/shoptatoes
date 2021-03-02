@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {useMediaPredicate} from "react-media-hook";
 import ProductList from './ProductList';
 import TopPart from './TopPart';
 import Section2 from './Section2';
@@ -14,12 +15,15 @@ import StayInTouch from './StayInTouch';
 
 
 const HomePage = ({featuredProducts}) => {
-   
+    const lessThan540 = useMediaPredicate("(max-width: 540px)");
     return(
         
         <>
             <TopPart />
+            {  !lessThan540 &&
             <Companies />
+
+            }
             <Section2 />
             <ProductList header="Collections" subHeader="potatoes" products = {featuredProducts} />  
             <Section3 />
