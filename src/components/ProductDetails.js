@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import ProductList from './ProductList';
 import ProductForm from './ProductForm';
 import Rating from './Rating';
+import Accordion from './Accordion';
 const imgStyle = {
     width: "100%",
     height: "450px"
@@ -50,6 +51,7 @@ const ProductDetails = ({product,  products}) => {
     </div>
     </div>
     <ProductList similarItems="true" header="Similar Products" products={products} />
+    <Accordion items={[{title: "blah blah blah blah?", content:"blahblahblah blah blah blah blah"},{title: "blah blah blah blah?", content:"blahblahblah blah blah blah blah"}]} heading="Frequently Asked Questions"/>
   </div>       
     );
 }; //End of ProductDetails component
