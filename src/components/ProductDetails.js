@@ -17,7 +17,7 @@ const imgStyle = {
   }
 
 //ProductDetails Component
-const ProductDetails = ({product,  products}) => {
+const ProductDetails = ({product,  products, items}) => {
     //useEffect(()=>fetchProducts(), [fetchProducts]);
     useEffect(()=>window.scrollTo(0,0));
     console.log(product);
@@ -51,7 +51,7 @@ const ProductDetails = ({product,  products}) => {
     </div>
     </div>
     <ProductList similarItems="true" header="Similar Products" products={products} />
-    <Accordion items={[{title: "blah blah blah blah?", content:"blahblahblah blah blah blah blah"},{title: "blah blah blah blah?", content:"blahblahblah blah blah blah blah"}]} heading="Frequently Asked Questions"/>
+    <Accordion items={items} heading="Frequently Asked Questions"/>
   </div>       
     );
 }; //End of ProductDetails component
@@ -64,11 +64,30 @@ const mapPropsToState = (state,ownProps) =>{
     const id = ownProps.match.params.id;
     const pro = state.products.find(el=>el.id.toString() === id );
     const similarPro = state.products.filter(el=>el.category === pro.category );
-    
+    let items = [
+      {
+        title: "blah blah blah blah question1?", 
+        content:"blahblahblah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+      },
+      {
+        title: "blah blah blah blah question2?", 
+        content:"blahblahblah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+      },
+      {
+        title: "blah blah blah blah question3?", 
+        content:"blahblahblah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+      },
+      {
+        title: "blah blah blah blah question4?", 
+        content:"blahblahblah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+      }
+      
+  ];
     console.log("---",pro);
     return{
         product: pro,
-        products: similarPro
+        products: similarPro,
+        items: items
     }
 }
 export default connect(mapPropsToState)(ProductDetails);
