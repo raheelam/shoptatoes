@@ -5,7 +5,15 @@ const Footer = () => {
   const lessThan500 = useMediaPredicate('(max-width: 500px)');
   return (
     <div
-      style={{ background: '#EBE9F6', padding: '70px 0px' }}
+      style={{
+        // background: '#EBE9F6',
+        backgroundColor: '#f7ebd4',
+        // backgroundColor: '#e5d8c0',
+        // borderTop: '1px solid lightgrey',
+        // backgroundColor: '#DCC79F',
+
+        padding: '70px 0px',
+      }}
       className="ui section  "
     >
       <div class="ui  grid centered container ">

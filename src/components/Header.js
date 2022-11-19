@@ -24,7 +24,17 @@ const dropdown = () => {
 const Header = () => {
   const lessThan540 = useMediaPredicate('(max-width: 640px)');
   return (
-    <div className="ui secondary pointing menu ">
+    <div
+      style={{
+        position: 'fixed',
+        top: '0',
+        zIndex: '999',
+        background: 'white',
+        width: '100vw',
+        height: '46px',
+      }}
+      className="ui secondary pointing menu "
+    >
       <div className="left menu">
         <Link to="/" className="item header">
           Bodu

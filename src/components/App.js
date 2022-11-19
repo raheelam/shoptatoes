@@ -11,7 +11,14 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <div style={{ padding: 0, margin: 0 }}>
+        <div
+          style={{
+            padding: 0,
+            margin: 0,
+            position: 'relative',
+            marginTop: '60px',
+          }}
+        >
           <Header />
           <Route path="/shop" exact component={Shop} />
           <Route path="/product/:id" exact component={ProductDetails} />
