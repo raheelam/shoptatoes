@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 import ProductItem from './ProductItem';
 
-const ProductListWrapper = styled.div`
+export const UnlimtitedScrollWrapper = styled.div.attrs({
+  className: 'hide-scroll',
+})`
   --gap: 16px;
 
   display: flex;
   gap: var(--gap);
 
   width: 100%;
-  // overflow: auto;
-  padding: 0 1rem;
+  overflow: auto;
+  // padding: 0 1rem;
   // text-align: center;
   flex-shrink: 0;
   // align-items: center;
@@ -64,13 +66,11 @@ const CollectionList = ({ products, header, subHeader, children }) => {
           display: 'flex',
           width: '85vw',
           padding: 0,
-          overflow: 'auto',
+          // overflow: 'auto',
           justifyContent: 'center',
         }}
       >
-        <ProductListWrapper className="hide-scroll">
-          {getProducts('')}
-        </ProductListWrapper>
+        <UnlimtitedScrollWrapper>{getProducts('')}</UnlimtitedScrollWrapper>
       </div>
     </div>
   );

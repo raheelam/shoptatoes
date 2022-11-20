@@ -1,5 +1,4 @@
 import React from 'react';
-import { useMediaPredicate } from 'react-media-hook';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -42,7 +41,6 @@ const MobileMenu = styled.div`
   }
 `;
 const Header = () => {
-  const lessThan540 = useMediaPredicate('(max-width: 640px)');
   return (
     <HeaderWrapper className="ui secondary pointing menu ">
       <div className="left menu">
@@ -76,8 +74,7 @@ const Header = () => {
           </div>
         </div>
       </MobileMenu>
-      {/* {!lessThan540 && ( */}
-      {/* <React.Fragment> */}
+
       <React.Fragment>
         <div className="left menu desktop-menu">
           <a href="/" className="item">

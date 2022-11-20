@@ -12,12 +12,10 @@ const imgStyle = {
 };
 const descStyle = {
   height: '85%',
-  // marginTop: '0.5rem',
   padding: '5px',
   border: '1px solid lightgrey',
   width: '86%',
   borderRadius: '5px',
-  // marginBottom: '1rem',
   overflow: 'auto',
 };
 
@@ -47,7 +45,7 @@ const ProductSection = styled.div`
 const ProductDetails = ({ product, products, items }) => {
   //useEffect(()=>fetchProducts(), [fetchProducts]);
   useEffect(() => window.scrollTo(0, 0));
-  console.log(product);
+
   if (!product) {
     return <div style={{ height: '50vh' }}>loading...</div>;
   }
@@ -73,7 +71,6 @@ const ProductDetails = ({ product, products, items }) => {
           >
             <h1
               style={{
-                marginBottom: '0',
                 fontSize: '1.5rem',
                 marginBottom: '5px',
               }}
@@ -132,6 +129,7 @@ const ProductDetails = ({ product, products, items }) => {
       </ProductSection>
       <ProductList
         similarItems="true"
+        unlimitedScroll
         header="Similar Products"
         products={products}
       />

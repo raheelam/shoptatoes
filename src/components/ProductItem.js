@@ -1,13 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
-import {
-  imgStyle,
-  noWrap,
-  noOverflow,
-  priceStyle,
-  topDivStyle,
-} from './productItemStyles';
+import { noWrap, noOverflow, priceStyle } from './productItemStyles';
 import styled from 'styled-components';
 
 const ProductCard = styled.div`
@@ -44,18 +38,14 @@ const ProductItem = ({
       <Link to={`/product/${id}`}>
         <div
           style={{ padding: '1rem 1rem 3rem  1rem', position: 'relative' }}
-          // style={topDivStyle}
           className="center aligned"
         >
-          {/* <div> */}
           <img
             alt={name}
             style={{ objectFit: 'cover', width: '100%', height: '115px' }}
-            // style={imgStyle}
-
             src={image}
           />
-          {/* </div> */}
+
           <p
             className="left floated"
             style={{
@@ -82,14 +72,13 @@ const ProductItem = ({
             <Rating rating={rating} />
           </span>
         </div>
-        {/* <div className="meta"> */}
-        {/* <p style={noWrap}>{store}</p> */}
+
         <button
           style={{
             width: 'calc(100% + 1px)',
             boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
             marginLeft: '-0.5px',
-            // marginBottom: '-4px',
+
             padding: '0.8rem 0.5rem',
             marginTop: '1rem',
             background: 'black',
@@ -101,7 +90,6 @@ const ProductItem = ({
         >
           Add to cart
         </button>
-        {/* </div> */}
       </div>
     </ProductCard>
   );
