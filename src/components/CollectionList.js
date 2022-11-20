@@ -1,8 +1,6 @@
 import React from 'react';
-
-import { useMediaPredicate } from 'react-media-hook';
 import styled from 'styled-components';
-import { setSlider, plusSlides } from '../util/slider';
+
 import ProductItem from './ProductItem';
 
 const ProductListWrapper = styled.div`
@@ -12,23 +10,14 @@ const ProductListWrapper = styled.div`
   gap: var(--gap);
 
   width: 100%;
-  flex-wrap: wrap;
-  text-align: center;
+  // overflow: auto;
+  padding: 0 1rem;
+  // text-align: center;
+  flex-shrink: 0;
+  // align-items: center;
 
-  align-items: center;
   .product-card {
-    @media only screen and (max-width: 4068px) {
-      --average-gap-lg: calc((var(--gap) * 4) / 5);
-      width: calc(20% - var(--average-gap-lg));
-    }
-    @media only screen and (max-width: 768px) {
-      --average-gap-sm: calc((var(--gap) * 1) / 2);
-      width: calc(50% - var(--average-gap-sm));
-    }
-
-    @media only screen and (max-width: 468px) {
-      width: 100%;
-    }
+    min-width: 12rem;
   }
 `;
 
@@ -73,12 +62,15 @@ const CollectionList = ({ products, header, subHeader, children }) => {
       <div
         style={{
           display: 'flex',
-          width: '90vw',
-
+          width: '85vw',
+          padding: 0,
+          overflow: 'auto',
           justifyContent: 'center',
         }}
       >
-        <ProductListWrapper>{getProducts('')}</ProductListWrapper>
+        <ProductListWrapper className="hide-scroll">
+          {getProducts('')}
+        </ProductListWrapper>
       </div>
     </div>
   );

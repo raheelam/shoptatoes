@@ -4,7 +4,7 @@ import Rating from './Rating';
 const ReviewCard = ({ sliderClass }) => {
   return (
     <div
-      style={{ width: sliderClass == '' ? '16rem' : '90%', margin: 0 }}
+      style={{ width: sliderClass === '' ? '16rem' : '90%', margin: 0 }}
       className={`ui card ${sliderClass} centered`}
     >
       <div className="content">

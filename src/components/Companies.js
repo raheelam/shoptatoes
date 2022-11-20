@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Companies = () => {
+const Companies = ({ className, ...others }) => {
   const spanStyle = {
     // display: 'inline',
     // marginLeft: '4.375rem',
@@ -11,7 +11,7 @@ const Companies = () => {
   };
   return (
     <div
-      className=""
+      className={`${className} hide-scroll`}
       style={{
         display: 'flex',
         gap: '4.375rem',
@@ -23,6 +23,7 @@ const Companies = () => {
 
         // textAlign: 'center',
       }}
+      {...others}
     >
       <div style={{ ...spanStyle, margin: '0px' }}>Homes</div>
       <div style={spanStyle}>Offices</div>

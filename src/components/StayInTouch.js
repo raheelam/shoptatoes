@@ -10,8 +10,13 @@ const StayInTouch = () => {
         //    background:"#99989e "
       }}
     >
-      <div className="ui two columns grid middle aligned">
-        <div className="column">
+      <div
+        style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}
+        //   className="ui two columns grid middle aligned"
+      >
+        <div
+        // className="column"
+        >
           <form style={{ width: '80%', margin: '0px auto' }}>
             <h1>Let's stay in touch</h1>
             <p>
@@ -22,7 +27,9 @@ const StayInTouch = () => {
             <button>subscribe</button>
           </form>
         </div>
-        <div className="column center aligned">
+        <div
+        // className="column center aligned"
+        >
           <img
             style={{ width: '80%', height: '150px' }}
             alt="section4"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useMediaPredicate } from 'react-media-hook';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const dropdown = () => {
   const dmenu = document.querySelector('.d.menu');
@@ -21,63 +22,46 @@ const dropdown = () => {
   }
 };
 
+const HeaderWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: white !important;
+  width: 100vw;
+  height: 46px;
+  .desktop-menu {
+    @media only screen and (max-width: 640px) {
+      display: none !important;
+    }
+  }
+`;
+
+const MobileMenu = styled.div`
+  @media screen and (min-width: 641px) {
+    display: none !important;
+  }
+`;
 const Header = () => {
   const lessThan540 = useMediaPredicate('(max-width: 640px)');
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: '0',
-        zIndex: '999',
-        background: 'white',
-        width: '100vw',
-        height: '46px',
-      }}
-      className="ui secondary pointing menu "
-    >
+    <HeaderWrapper className="ui secondary pointing menu ">
       <div className="left menu">
         <Link to="/" className="item header">
           Bodu
         </Link>
       </div>
-      {lessThan540 && (
-        <React.Fragment>
-          <div className="right menu item ">
-            <div onClick={dropdown} className="ui d">
-              <i className=" justify align icon"></i>
-              <div hidden className="d menu">
-                <a href="/" className="item">
-                  balls
-                </a>
-                <a href="/" className="item">
-                  Automotive
-                </a>
-                <a href="/" className="item">
-                  Home
-                </a>
-                <a href="/" className="item">
-                  Decor
-                </a>
-                <a href="/" className="item">
-                  Play
-                </a>
-
-                <Link to="/shop" className="item">
-                  Shop
-                </Link>
-              </div>
-            </div>
-          </div>
-        </React.Fragment>
-      )}
-      {!lessThan540 && (
-        <React.Fragment>
-          <div className="left menu">
+      <MobileMenu className="right menu item ">
+        <div onClick={dropdown} className="ui d">
+          <i className=" justify align icon"></i>
+          <div hidden className="d menu">
             <a href="/" className="item">
-              Ball Pits
+              balls
             </a>
             <a href="/" className="item">
-              Balls
+              Automotive
+            </a>
+            <a href="/" className="item">
+              Home
             </a>
             <a href="/" className="item">
               Decor
@@ -85,26 +69,48 @@ const Header = () => {
             <a href="/" className="item">
               Play
             </a>
+
             <Link to="/shop" className="item">
               Shop
             </Link>
           </div>
+        </div>
+      </MobileMenu>
+      {/* {!lessThan540 && ( */}
+      {/* <React.Fragment> */}
+      <React.Fragment>
+        <div className="left menu desktop-menu">
+          <a href="/" className="item">
+            Ball Pits
+          </a>
+          <a href="/" className="item">
+            Balls
+          </a>
+          <a href="/" className="item">
+            Decor
+          </a>
+          <a href="/" className="item">
+            Play
+          </a>
+          <Link to="/shop" className="item">
+            Shop
+          </Link>
+        </div>
 
-          <div className="right menu">
-            <a href="/" className="item">
-              Blogs
-            </a>
-            <a href="/" className="item">
-              Gift Cards
-            </a>
-            <a href="/" className="item">
-              Cart &nbsp;
-              <i className="ui icon shopping bag"></i>
-            </a>
-          </div>
-        </React.Fragment>
-      )}
-    </div>
+        <div className="right menu desktop-menu">
+          <a href="/" className="item">
+            Blogs
+          </a>
+          <a href="/" className="item">
+            Gift Cards
+          </a>
+          <a href="/" className="item">
+            Cart &nbsp;
+            <i className="ui icon shopping bag"></i>
+          </a>
+        </div>
+      </React.Fragment>
+    </HeaderWrapper>
   );
 };
 
