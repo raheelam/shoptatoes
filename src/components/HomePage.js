@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import TopPart from './TopPart';
@@ -19,6 +19,7 @@ const CompaniesWrapper = styled.div`
 `;
 
 const HomePage = ({ featuredProducts }) => {
+  useEffect(() => window.scrollTo(0, 0), []);
   return (
     <>
       <TopPart />

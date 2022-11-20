@@ -52,21 +52,21 @@ const Header = () => {
         <div onClick={dropdown} className="ui d">
           <i className=" justify align icon"></i>
           <div hidden className="d menu">
-            <a href="/" className="item">
+            <Link to="/" className="item">
               balls
-            </a>
-            <a href="/" className="item">
+            </Link>
+            <Link to="/" className="item">
               Automotive
-            </a>
-            <a href="/" className="item">
+            </Link>
+            <Link to="/" className="item">
               Home
-            </a>
-            <a href="/" className="item">
+            </Link>
+            <Link to="/" className="item">
               Decor
-            </a>
-            <a href="/" className="item">
+            </Link>
+            <Link to="/" className="item">
               Play
-            </a>
+            </Link>
 
             <Link to="/shop" className="item">
               Shop
@@ -77,34 +77,34 @@ const Header = () => {
 
       <React.Fragment>
         <div className="left menu desktop-menu">
-          <a href="/" className="item">
+          <Link to="/" className="item">
             Ball Pits
-          </a>
-          <a href="/" className="item">
+          </Link>
+          <Link to="/" className="item">
             Balls
-          </a>
-          <a href="/" className="item">
+          </Link>
+          <Link to="/" className="item">
             Decor
-          </a>
-          <a href="/" className="item">
+          </Link>
+          <Link to="/" className="item">
             Play
-          </a>
+          </Link>
           <Link to="/shop" className="item">
             Shop
           </Link>
         </div>
 
         <div className="right menu desktop-menu">
-          <a href="/" className="item">
+          <Link to="/" className="item">
             Blogs
-          </a>
-          <a href="/" className="item">
+          </Link>
+          <Link to="/" className="item">
             Gift Cards
-          </a>
-          <a href="/" className="item">
+          </Link>
+          <Link to="/" className="item">
             Cart &nbsp;
             <i className="ui icon shopping bag"></i>
-          </a>
+          </Link>
         </div>
       </React.Fragment>
     </HeaderWrapper>

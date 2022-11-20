@@ -44,7 +44,7 @@ const ProductSection = styled.div`
 //ProductDetails Component
 const ProductDetails = ({ product, products, items }) => {
   //useEffect(()=>fetchProducts(), [fetchProducts]);
-  useEffect(() => window.scrollTo(0, 0));
+  useEffect(() => window.scrollTo(0, 0), []);
 
   if (!product) {
     return <div style={{ height: '50vh' }}>loading...</div>;
