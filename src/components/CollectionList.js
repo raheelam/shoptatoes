@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import ProductItem from './ProductItem';
+import CollectionItem from './CollectionCard';
 
 export const UnlimtitedScrollWrapper = styled.div.attrs({
   className: 'hide-scroll',
@@ -32,7 +31,7 @@ const CollectionList = ({ products, header, subHeader, children }) => {
     }
 
     return products.map((product) => (
-      <ProductItem
+      <CollectionItem
         key={product.id}
         sliderClass={ms}
         price={product.price}
