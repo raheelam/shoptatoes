@@ -2,8 +2,6 @@ import React from 'react';
 
 const Companies = ({ className, ...others }) => {
   const spanStyle = {
-    // display: 'inline',
-    // marginLeft: '4.375rem',
     padding: '0.625rem',
     fontWeight: '800',
     background: 'black',
@@ -20,8 +18,6 @@ const Companies = ({ className, ...others }) => {
         maxWidth: '80%',
         margin: 'auto',
         padding: '2.5rem 0.625rem',
-
-        // textAlign: 'center',
       }}
       {...others}
     >

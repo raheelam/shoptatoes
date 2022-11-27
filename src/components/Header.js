@@ -45,7 +45,7 @@ const Header = () => {
     <HeaderWrapper className="ui secondary pointing menu ">
       <div className="left menu">
         <Link to="/" className="item header">
-          Bodu
+          Bodu Design
         </Link>
       </div>
       <MobileMenu className="right menu item ">
@@ -53,19 +53,19 @@ const Header = () => {
           <i className=" justify align icon"></i>
           <div hidden className="d menu">
             <Link to="/" className="item">
-              balls
+              Furniture
             </Link>
             <Link to="/" className="item">
-              Automotive
+              Carpets
             </Link>
             <Link to="/" className="item">
               Home
             </Link>
             <Link to="/" className="item">
-              Decor
+              Office
             </Link>
             <Link to="/" className="item">
-              Play
+              Decor
             </Link>
 
             <Link to="/shop" className="item">

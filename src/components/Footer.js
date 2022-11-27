@@ -20,7 +20,7 @@ const Footer = () => {
         <div class=" column row  ">
           {!lessThan500 && (
             <div class=" four wide column">
-              <h3 className="ui header">Bodu</h3>
+              <h3 className="ui header">Bodu Design</h3>
               <p>HELLO</p>
               <p>HELLO</p>
               <p>HELLO</p>

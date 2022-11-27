@@ -6,17 +6,11 @@ export const UnlimtitedScrollWrapper = styled.div.attrs({
   className: 'hide-scroll',
 })`
   --gap: 16px;
-
   display: flex;
   gap: var(--gap);
-
   width: 100%;
   overflow: auto;
-  // padding: 0 1rem;
-  // text-align: center;
   flex-shrink: 0;
-  // align-items: center;
-
   .product-card {
     min-width: 12rem;
   }
