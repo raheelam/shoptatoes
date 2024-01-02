@@ -77,7 +77,6 @@ const ProductItem = ({
             width: 'calc(100% + 1px)',
             boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
             marginLeft: '-0.5px',
-
             padding: '0.8rem 0.5rem',
             marginTop: '1rem',
             background: 'black',
